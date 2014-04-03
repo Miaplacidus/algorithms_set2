@@ -21,12 +21,12 @@ describe "Set2" do
     end
 
     it "will return an array with all intersecting values" do
-      intersection = Set2.find_intersection([24, 15, 20, 7, 5, 10],[12, 7, 24, 18, 6],[7, 24, 14, 28, 21]) 
+      intersection = Set2.find_intersection([24, 15, 20, 7, 5, 10],[12, 7, 24, 18, 6],[7, 24, 14, 28, 21])
       expect(intersection.include?(7)).to eq(true)
       expect(intersection.include?(24)).to eq(true)
       expect(intersection.size).to eq(2)
     end
-    
+
     it "will not include values that are only present in 2 arrays" do
       expect(Set2.find_intersection([10],[10],[7])).to eq([])
     end
